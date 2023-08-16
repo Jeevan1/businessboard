@@ -1,0 +1,104 @@
+@import "../../assets/color";
+
+.DublicateLeads {
+    min-height: 100vh;
+    background-color: $bg1;
+
+    &__header {
+        height: 60px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        position: sticky;
+        top: 0;
+
+        button {
+            height: 80%;
+            font-size: 20px;
+
+            &:hover {
+                background-color: $bg3;
+            }
+        }
+
+        h4 {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    &__form {
+        width: 65%;
+        margin: 20px auto;
+        background-color: white;
+        font-size: 13px;
+        margin-bottom: 60px;
+
+        button{
+            color: $apps;
+            &:hover{
+                color: white;
+                background-color: $apps;
+            }
+        }
+        .i{
+            background-color: black;
+            border-radius: 50%;
+            color: white;
+        }
+        &__1{
+            p{
+                padding: 9px 0;
+            }
+
+        }
+        &__2{
+            table{
+                font-size: 13px;
+                thead{
+                    tr{
+                        height: 35px;
+                        padding: 0;
+                        border: 0;
+                        border-bottom: 2px solid lightgray;
+                        th{
+                            font-weight: 700 !important;
+                            color: black;
+                        }
+                    }
+                }
+                tbody{
+                    margin-bottom: 10px;
+                    
+                }
+
+            }
+        }
+        &__submit {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: white;
+
+            div {
+                width: 67%;
+                margin: auto;
+                display: flex;
+                justify-content: end;
+                gap: 10px;
+
+                button {
+                    border: 1px solid $bg3;
+                    padding: 10px 15px;
+                    border-radius: 5px;
+
+                    &:last-child {
+                        background-color: $apps;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}

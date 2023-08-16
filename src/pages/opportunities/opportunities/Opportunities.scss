@@ -1,0 +1,24 @@
+@import "../../../assets/color";
+
+.Opportunities{
+    background-color: $bg2;
+    position: relative;
+    // height: fit-content;
+
+    &__content{
+        &__1{
+            button{
+                font-size: 14px;
+                color: rgba(255, 255, 255, 1);
+                background-color:$apps;
+                opacity: 1;
+
+            }
+            .icon{
+                background-color: white;
+                font-size: 35px;
+                width: 30px;
+            }
+        }
+    }
+}

@@ -1,0 +1,194 @@
+@import "../../assets/color";
+
+.NewCalls {
+    min-height: 100vh;
+    background-color: $bg1;
+
+    &__header {
+        height: 60px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        position: sticky;
+        top: 0;
+
+        button {
+            height: 80%;
+            font-size: 20px;
+
+            &:hover {
+                background-color: $bg3;
+            }
+        }
+
+        h4 {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    &__form {
+        width: 65%;
+        margin: 20px auto;
+        background-color: white;
+        font-size: 13px;
+        margin-bottom: 60px;
+        hr {
+            height: 0.01rem;
+            margin: 0;
+        }
+        &__1{
+            padding: 10px 0px;
+            display: flex;
+            gap: 30px;
+            // justify-content: space-between;/
+            // flex-wrap: wrap;
+            .input__form{
+                width: 100%;
+                display: flex;
+                padding: 10px 0;
+                gap: 20px;
+                label{
+                    width: 30%;
+                    text-align: end;
+                }
+                select, input{
+                    border: none;
+                    border-bottom: 1px solid lightgray;
+                    outline: none;
+                    padding-bottom: 10px;
+                    width: 70%;
+                }
+                .textarea{
+                    outline: none;
+                    border: 1px solid lightgray;
+                    width: 70%;
+                    
+                }
+                span{
+                    height: 35px;
+                    width: 50%;
+                    font-weight: 600;
+                    text-align: center;
+                    padding: 5px 0;
+                    cursor: pointer;
+                    color: $apps;
+                    // background-color: $bg3;
+                }
+                span.active{
+                    background-color: $apps !important;
+                    color: white;
+                }
+            }
+            .text__area{
+                width: 48%;
+                border-bottom: 1px solid lightgray;
+            }
+            table{
+                width: 100%;
+                margin: 20px 0;
+                thead,tbody{
+                    justify-content: space-between;
+                    // padding: 15px 0;
+                    tr{
+                        height: 40px;
+                        td{
+                        }
+                    }
+                }
+                thead{
+                    border-bottom: 2px solid lightgray;
+                }
+            }
+            .disabled{
+                padding: 10px 0;
+                border-bottom: 1px solid lightgray;
+                width: 100%;
+                input{
+                    text-align: right;
+                    padding-right: 5px;
+                    border: 0;
+                }
+            }
+        }
+
+        &__advanced{
+            button{
+                color: $apps;
+                .icon{
+                    font-size: 20px;
+                }
+                &:hover{
+                    text-decoration: underline;
+
+                }
+            }
+
+        }
+        .choose__file{
+            .input{
+                color: gray;
+                position: relative;
+                border: 1px solid gray;
+                border-style: dashed;
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                justify-content: center;
+                padding: 10px 0;
+                p{
+                    span{
+                        cursor: pointer;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                }
+               svg{
+                color: red !important;
+               }
+                input{
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    top: 0;
+                    opacity: 0;
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+            button{
+                width: fit-content;
+                
+            }
+        }
+
+        &__submit {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: white;
+
+            div {
+                width: 67%;
+                margin: auto;
+                display: flex;
+                justify-content: end;
+                gap: 10px;
+
+                button {
+                    border: 1px solid $bg3;
+                    padding: 10px 15px;
+                    border-radius: 5px;
+
+                    &:last-child {
+                        background-color: $apps;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}

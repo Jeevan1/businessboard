@@ -1,0 +1,61 @@
+@import "../../../assets/color";
+
+.Stock{
+    background-color: $bg2;
+    position: relative;
+    
+    &__content{
+        &__1{
+            .link{
+                font-size: 14px;
+                color: rgba(255, 255, 255, 1);
+                background-color:$apps;
+                opacity: 1;
+
+            }
+            .icon{
+                background-color: white;
+                font-size: 35px;
+                width: 30px;
+            }
+
+            
+        }
+        &__2{
+            table{
+                tbody{
+                    color: black;
+                }
+                tr{
+                    cursor: pointer;
+                    .title, .desc{
+                        color: $apps;
+                    }
+
+                    .desc{
+                        position: relative;
+                        
+                        height: 100%;
+                        div{
+                            position: absolute;
+                            display: none;
+                            bottom: -15px;
+                            right: 85%;
+                            min-height: 70px;
+                            align-items: center;
+                            color: gray;
+                            p{
+                                width: 100px;
+
+                            }
+
+                        }
+                        .icon:hover + div{
+                            display: flex;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

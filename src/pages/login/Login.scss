@@ -1,0 +1,74 @@
+@import "../../assets/color";
+
+.login {
+    background-color: $bg1;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+
+    p{
+        font-size: 12px;
+      }
+
+    &__container {
+        width: 600px !important;
+
+    }
+    &__body {
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+        &__1 {
+            text-align: center;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+        &__2{
+            padding: 0 4rem;
+            display: flex;
+            flex-direction: column;
+            // gap: 1px;
+           
+            .link{
+                font-size: 13px;
+                text-align: right;
+            }
+            button{
+                background-color: $bgbtn;
+                color: white;
+                font-size: 14px;
+                
+            }
+        }
+        &__3{
+            text-align: center;
+            background-color: $bg2;
+            .google{
+                width: 30%;
+                margin: auto;
+                padding: 15px 0;
+                cursor: pointer;
+                box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+            }
+        }
+    }
+    &__footer{
+        hr{
+            width: 20%;
+            margin: auto;
+        }
+        img{
+            height: 40px;
+            width: 130px;
+            object-fit: cover;
+        }
+        .bottom{
+            p{
+                font-size: 11px;
+                &:last-child{
+                    display: block;
+                    
+                }
+            }
+        }
+    }
+}

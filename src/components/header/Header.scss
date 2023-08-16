@@ -1,0 +1,170 @@
+@import "../../assets/color";
+.Header{
+    position: fixed;
+    // top: 0; /* Stick to the top of the container */
+    background-color: white;
+    height: 50px;
+    z-index: 999;
+    font-size: 15px;
+    .Header-top{
+        height: 100%;
+        flex-basis: 93%;
+            .header__link{
+                min-width: 130px;
+                color: gray ;
+                text-transform: capitalize;
+                padding: 13px 0;
+                position: relative;
+                text-decoration: none;
+                &::before{
+                    position: absolute;
+                    content: '';
+                    bottom: 0;
+                    left: 0%;
+                    right: 50%;
+                    top: 95%;
+                    height: 2px;
+                    
+                    background-color: rgb(255, 255, 255);
+                    animation: leftback 0.2s ease-in-out;
+                }
+                &::after{
+                    position: absolute;
+                    content: '';
+                    bottom: 0;
+                    left: 50%;
+                    right: 0;
+                    top: 95%;
+                    height: 2px;
+                    background-color: rgb(255, 255, 255);
+                    animation: rightback 0.2s ease-in-out;
+                }
+                @keyframes leftback {
+                    from{
+                        left: 0%;
+                        background-color: $sales;
+                    }
+                    to{
+                        left: 50%;
+                        background-color: $sales;
+                    }
+                }
+                @keyframes rightback {
+                    from{
+                        right: 0%;
+                        background-color: $sales;
+                    }
+                    to{
+                        right: 50%;
+                        background-color: $sales;
+                    }
+                }
+                
+            }
+            .active{
+                position: relative;
+                color: $gray;
+                font-weight: 600;
+                &::before{
+                    position: absolute;
+                    content: '';
+                    bottom: 0;
+                    left: 0%;
+                    right: 50%;
+                    top: 95%;
+                    height: 2px;
+                    background-color: $sales;
+                    animation: left 0.3s ease-in-out;
+                }
+                &::after{
+                    position: absolute;
+                    content: '';
+                    bottom: 0;
+                    left: 50%;
+                    right: 0;
+                    top: 95%;
+                    height: 2px;
+                    background-color: $sales;
+                    animation: right 0.3s ease-in-out;
+                }
+                @keyframes left {
+                    from{
+                        left: 50%;
+                    }
+                    to{
+                        left: 0;
+                    }
+                }
+                @keyframes right {
+                    from{
+                        right: 50%;
+                    }
+                    to{
+                        right: 0;
+                    }
+                }
+          }
+      
+        .more__link{
+            color: gray;
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            .sub__links{
+                min-width: 200px;
+                position: absolute;
+                top: 53px;
+                text-align: left;
+                background-color: white !important;
+                .link{
+                    color: gray;
+                    font-size: 14px;
+                    width: 100%;
+                    &:hover{
+                        background-color: $apps;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+    .header__2{
+        // width: 25%;
+        flex-basis: 7%;
+        text-align: center;
+        color: gray;
+        position: relative;
+        div{
+            &:first-child{
+                cursor: pointer;
+            }
+        }
+        &__links{
+            position: absolute ;
+            display: flex;
+            flex-direction: column;
+            top: 35px;
+            background-color: white;
+            width: 170px;
+            .link{
+                min-width: fit-content;
+                color: gray !important;
+                text-transform: capitalize;
+                font-size: 13px;
+                text-align: left;
+                display: block;
+                &:hover{
+                    background-color: $bg2;
+                }
+            }
+            .link.active{
+                background-color: $apps;
+                color: white;
+            }
+        }
+    }
+    
+}

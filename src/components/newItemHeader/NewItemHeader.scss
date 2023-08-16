@@ -1,0 +1,26 @@
+@import "../../assets/color";
+
+.header {
+    height: 60px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+    button {
+        height: 80%;
+        font-size: 20px;
+
+        &:hover {
+            background-color: $bg3;
+        }
+    }
+
+    h5 {
+        width: 100%;
+        text-align: center;
+        opacity: 0.8;
+    }
+}

@@ -1,0 +1,287 @@
+@import "../../../assets/color";
+
+.GeneralLedger {
+    min-height: 100vh;
+    background-color: $bg1;
+
+    &__header {
+        height: 60px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        position: sticky;
+        top: 0;
+
+        button {
+            height: 80%;
+            font-size: 20px;
+            position: absolute;
+
+            &:hover {
+                background-color: $bg3;
+            }
+        }
+
+        h5 {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    &__content {
+        width: 75%;
+        margin: auto;
+
+        &__header {
+            text-align: center;
+            color: white;
+            background-color: $account;
+
+            &>div {
+                div {
+                    padding: 0 40px;
+
+                    p {
+                        font-size: 28px;
+                        font-weight: 400 !important;
+                    }
+
+                    small {
+                        font-size: 12px;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+
+        &__filter {
+            &__1 {
+                display: flex;
+                justify-content: space-between;
+
+                button {
+                    font-size: 13px;
+                    font-weight: 400;
+
+                    .icon {
+                        transform: rotate(270deg);
+                        font-size: 16px;
+                        padding: 0;
+                        margin: 0;
+                    }
+
+                    &:first-child:hover {
+                        background-color: $apps !important;
+                        color: white !important;
+                    }
+
+                    &:last-child:hover {
+                        background-color: rgb(64, 64, 227) !important;
+                    }
+                }
+            }
+
+            &__2 {
+                background-color: white;
+                font-size: 13px;
+
+                .filter__modes {
+                    border-bottom: 2px solid lightgrey;
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 25px;
+
+                    .mode {
+                        button {
+                            border: 1px solid lightgray;
+                            padding: 5px 15px;
+                            color: $apps;
+
+                            &:hover {
+                                color: white;
+                                background-color: $apps;
+                            }
+                        }
+
+                        button.active {
+                            background-color: $apps;
+                            border: 0;
+                            padding: 5px 15px;
+                            color: white;
+                        }
+
+                        select {
+                            border: 1px solid lightgray;
+                            padding: 5px 15px;
+                            color: $apps;
+
+                            option {
+                                border: 0;
+                                margin: 10px;
+                            }
+                        }
+                    }
+                }
+
+                .filter__periods {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 7px;
+                    font-size: 12px;
+
+                    strong {
+                        display: block;
+                        width: 100%;
+                        padding-bottom: 5px;
+                    }
+
+                    .item {
+                        background-color: $bg3;
+                        display: flex;
+                        align-items: center;
+                        width: fit-content;
+                        padding: 4px 10px;
+                        border-radius: 30px;
+                        gap: 10px;
+
+                        .icon {
+                            cursor: pointer;
+                        }
+                    }
+
+                    .add__period {
+                        border: 1px solid lightgray;
+                        display: flex;
+                        align-items: center;
+                        width: fit-content;
+                        padding: 4px 15px;
+                        border-radius: 30px;
+                        color: $apps;
+                        gap: 3px;
+                        cursor: pointer;
+
+                        &:hover {
+                            background-color: $apps;
+                            color: white;
+                        }
+                    }
+
+                    .add {
+                        position: fixed;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        top: 0;
+                        background-color: rgba($color: #000000, $alpha: 0.4);
+
+                        .container {
+                            margin-top: 30px;
+                            width: 40%;
+                            background-color: white;
+
+                            &>div {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                background-color: $bg3;
+                                font-weight: 600;
+                                font-size: 20px;
+                                position: relative;
+
+                                .icon {
+                                    position: absolute;
+                                    right: 15px;
+                                    cursor: pointer;
+                                    color: rgba($color: #000000, $alpha: 0.5);
+
+                                    &:hover {
+                                        color: rgba($color: #000000, $alpha: 0.7);
+                                    }
+                                }
+                            }
+
+                            form {
+                                font-size: 15px;
+
+                                div {
+                                    input {
+                                        outline: none;
+                                        border-top: none;
+                                        border-left: none;
+                                        border-right: none;
+                                        background-color: transparent;
+                                        width: 40%;
+
+                                    }
+                                }
+
+                                .footer {
+                                    background-color: $bg3;
+
+                                    button {
+                                        background-color: $apps;
+                                        color: white;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .warning{
+           font-size: 13px; 
+           background-color: rgb(244, 244, 194);
+           opacity: 0.8;
+        }
+
+        &__data {
+            color: gray;
+            font-weight: 600;
+
+            small {
+                font-size: 12px;
+            }
+
+            p {
+                font-size: 13px;
+            }
+
+            &__1 {
+                border-bottom: 2px solid lightgrey;
+                table{
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    thead,tbody{
+                        font-size: 12px;
+                        tr{
+                            display: flex;
+                        justify-content: space-between;
+                        // gap: 20px;
+                        td{
+                            width: 100%;
+                            text-align: right;
+                            &:first-child{
+                                text-align: left;
+                            }
+                        }
+                        }
+                    }
+                    thead{
+
+                    }
+                    tbody{
+                        tr{
+                            padding: 10px 20px;
+                            justify-content: space-between;
+                            &:hover{
+                                background-color: $bg1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

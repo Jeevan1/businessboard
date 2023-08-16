@@ -1,0 +1,60 @@
+@import "../../../assets/color";
+
+.Sales{
+    background-color: $bg2;
+    position: relative;
+    height: fit-content;
+    width: 100%;
+    &__content{
+        position: relative;
+        top: 50px;
+        &__1{
+            height: 400px;
+            background-color: $sales;
+            .row{
+                width: 65%;
+                margin: auto;
+            }
+            &__left{
+                // filter: contrast(1);
+            }
+            &__right{
+                img{
+                    height: 250px;
+                }
+            }
+            .link{
+                transition: 0.3s;
+                background-color: orange;
+            }
+            .link:hover{
+                background-color: rgb(240, 157, 1);
+            }
+        }
+        &__2{
+            margin-bottom: 100px;
+            .icon{
+                font-size: 40px;
+                color: $sales;
+            }
+            strong{
+                padding: 10px 0 5px 0;
+            }
+            small{
+                font-size: 13px;
+                color: gray;
+            }
+            hr{
+                width: 80%;
+                margin: auto;
+            }
+            .link{
+                transition: 0.3s;
+                background-color: orange;
+            }
+            .link:hover{
+                background-color: rgb(240, 157, 1);
+            }
+        }
+    }
+}

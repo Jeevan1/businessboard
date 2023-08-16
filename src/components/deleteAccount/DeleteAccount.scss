@@ -1,0 +1,79 @@
+@import "../../assets/color";
+
+.DeleteAccount {
+    min-height: 100vh;
+    background-color: $bg1;
+
+    &__content {
+        width: 65%;
+        margin: auto;
+        background-color: white;
+        font-size: 13px;
+        margin-bottom: 60px;
+        h4{
+            font-weight: 600;
+            font-size: 24px;
+
+        }
+        &__form{
+            padding: 5px 0;
+            .inputForm{
+                // height: 50px;
+                margin-bottom: 10px;
+                opacity: 0.9;
+                display: flex;
+                gap: 20px;
+                .lcol{
+                    flex-basis: 35%;
+                    display: flex;
+                    justify-content: end;
+                    font-weight: 700;
+                }
+                .rcol{
+                    flex-basis: 75%;
+                    width: 100%;
+                    &>div{
+                        display: flex;
+                        gap: 10px;
+                        padding-bottom: 7px;
+                    }
+                    textarea,input[type=text], input[type=password]{
+                        border-top: 0;
+                        border-left: 0;
+                        border-right: 0;
+                        width: 100%;
+                        outline: none;
+                        &:focus{
+                            border-bottom: 1px solid blue !important;
+                        }
+                    }
+                    input[type=password]{
+                        padding: 5px;
+                        background-color: rgba($color: blue, $alpha: 0.1);
+                    }
+                    
+
+                }
+            }
+        }
+        .DeleteAccount__content__2{
+            background-color: rgba($color: red, $alpha: 0.1);
+            color: rgb(135, 51, 51);
+            p{
+                padding-bottom: 10px;
+            }
+        }
+        .DeleteAccount__content__3{
+            background-color: $bg3;
+            button.cancel{
+                border: 1px solid gray;
+            }
+            button.confirm{
+                background-color: $apps;
+                color: white;
+            }
+        }
+
+    }
+
+}

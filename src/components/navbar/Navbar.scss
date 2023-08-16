@@ -1,0 +1,94 @@
+@import "../../assets/color";
+.Navbar{
+    grid-area: Navbar;
+    height: 3.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: white;
+    &__2{
+        .icon{
+            height: 100%;
+            width: 3.5rem;
+            padding: 15px;
+            &:hover{
+                
+                background-color: $bg3;
+            }
+            &:last-child{
+                height: 3.5rem;
+                width: 2rem;
+                padding: 5px;
+            }
+        }
+        .setting{
+            position: relative;
+            .icon{
+                padding: 15px;
+                width: 3.5rem;
+            }
+            &__item{
+                z-index: 1;
+                position: absolute ;
+                right: 0;
+                display: flex;
+                flex-direction: column;
+                background-color: white;
+                width: 160px;
+                .link{
+                    font-size: 13px;
+                    padding: 7px 15px;
+                    color: $gray;
+                    &:hover{
+                        background-color: $bg2;
+                    }
+                }
+            }
+        }
+        .profile{
+            p{
+                background-color: rgb(164, 96, 96);
+                height: 2.5rem;
+                width: 2.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                color: white;
+                font-size: 15px;
+            }
+            &:hover{
+                background-color: $bg3;
+
+            }
+        }
+        .sub_links{
+            position: absolute;
+            margin-top: 1px;
+            width: 220px;
+            height: fit-content;
+            right: 0;
+            background-color: white;
+            div{
+                line-height: 30px;
+                background-color: $bg1;
+                p{
+                    font-size: 15px;
+                }
+            }
+            .link{
+                display: block;
+                font-size: 13px;
+                color: black;
+                &:hover{
+                    background-color: $bg2;
+                }
+            }
+            hr{
+                padding: 0;
+                margin: 0;
+                border: 0.00000001rem solid gray;
+            }
+        }
+    }
+}

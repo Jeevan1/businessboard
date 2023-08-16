@@ -1,0 +1,122 @@
+@import "../../../assets/color";
+
+.Leads{
+    background-color: $bg2;
+    position: relative;
+    // height: fit-content;
+    &__top{
+        .header{
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 5px;
+            .header__link{
+                width: 130px;
+                color: gray ;
+                text-transform: capitalize;
+                padding: 13px 0;
+                position: relative;
+                text-decoration: none;
+                &::before{
+                    position: absolute;
+                    content: '';
+                    bottom: 0;
+                    left: 0%;
+                    right: 50%;
+                    top: 95%;
+                    height: 1px;
+                    
+                    background-color: rgb(255, 255, 255);
+                    animation: leftback 0.2s ease-in-out;
+                }
+                &::after{
+                    position: absolute;
+                    content: '';
+                    bottom: 0;
+                    left: 50%;
+                    right: 0;
+                    top: 95%;
+                    height: 1px;
+                    background-color: rgb(255, 255, 255);
+                    animation: rightback 0.2s ease-in-out;
+                }
+                @keyframes leftback {
+                    from{
+                        left: 0%;
+                        background-color: $sales;
+                    }
+                    to{
+                        left: 50%;
+                        background-color: $sales;
+                    }
+                }
+                @keyframes rightback {
+                    from{
+                        right: 0%;
+                        background-color: $sales;
+                    }
+                    to{
+                        right: 50%;
+                        background-color: $sales;
+                    }
+                }
+                
+            }
+            .active{
+                position: relative;
+                &::before{
+                    position: absolute;
+                    content: '';
+                    bottom: 0;
+                    left: 0%;
+                    right: 50%;
+                    top: 95%;
+                    height: 1px;
+                    background-color: $sales;
+                    animation: left 0.3s ease-in-out;
+                }
+                &::after{
+                    position: absolute;
+                    content: '';
+                    bottom: 0;
+                    left: 50%;
+                    right: 0;
+                    top: 95%;
+                    height: 1px;
+                    background-color: $sales;
+                    animation: right 0.3s ease-in-out;
+                }
+                @keyframes left {
+                    from{
+                        left: 50%;
+                    }
+                    to{
+                        left: 0;
+                    }
+                }
+                @keyframes right {
+                    from{
+                        right: 50%;
+                    }
+                    to{
+                        right: 0;
+                    }
+                }
+            }
+          }
+    }
+    &__content{
+        &__1{
+            button{
+                font-size: 14px;
+                color: rgba(255, 255, 255, 1);
+                background-color:$apps;
+                opacity: 1;
+
+            }
+            .icon{
+                background-color: white;
+                font-size: 35px;
+                cursor: pointer;
+                // width: 30px;
+            }
+        }
+    }
+}

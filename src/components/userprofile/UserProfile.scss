@@ -1,0 +1,177 @@
+@import "../../assets/color";
+
+.UserProfile {
+    background-color: $bg1;
+    width: 100%;
+    min-height: calc(100vh - 0px);
+    margin-bottom: 30px;
+
+    .container-fluid {
+        width: 75%;
+        margin: auto;
+        background-color: white;
+        height: 100%;
+    }
+
+    &__header {
+        height: 60px;
+        background-color: $bg2;
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+
+        .link {
+            width: 120px;
+            font-size: 16px;
+            color: gray;
+            height: 100%;
+            display: flex;
+            align-items: end;
+            padding-bottom: 10px;
+            font-weight: 600;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        .link.active {
+            color: black;
+            border-bottom: 2px solid $apps;
+        }
+    }
+
+    &__content {
+        &>div {
+            &>div {
+                display: flex;
+                padding: 20px 0;
+
+                p {
+                    flex-basis: 30%;
+                }
+
+                .profileImg {
+                    display: flex;
+                    gap: 100px;
+
+                    // width: 1000px;
+                    h1 {
+                        height: 100px;
+                        width: 100px;
+                        background-color: blueviolet;
+                        color: white;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 35px;
+                    }
+
+                    p {
+                        font-size: 13px;
+                        width: 500px;
+
+                        p {
+                            padding: 10px 0;
+                        }
+                    }
+                }
+
+                .changeEmail,
+                .changePass {
+                    width: 40%;
+
+                    label {
+                        font-size: 12px;
+                    }
+
+                    input {
+                        font-size: 14px;
+                    }
+
+                    button {
+                        margin-top: 10px;
+                        background-color: $apps;
+                        color: white;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        &__2{
+            width: 100%;
+            .Notification{
+                display: block;
+                &>div{
+                    display: flex;
+                    &>p{
+                        flex-basis: 25%;
+                    }
+                    &>div{
+                        display: flex;
+                        p{
+                            flex-basis: 25%;
+                        }
+                        div{
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__3 {
+            div {
+                flex-basis: 500px;
+            }
+
+            p {
+                font-weight: 600;
+            }
+
+            .inputForm {
+                margin-bottom: 10px;
+                display: flex;
+                flex-direction: column;
+                border-bottom: 1px solid gray;
+
+                // padding-bottom: 20px;
+                label {
+                    font-size: 13px;
+                    font-weight: 700;
+                }
+
+                select {
+                    font-size: 13px;
+                    outline: none;
+                    border: none;
+                    padding: 5px 0;
+                    -webkit-appearance: none;
+                }
+            }
+
+            .userInterface {
+                &>div {
+                    padding: 10px 0;
+                    font-size: 13px;
+
+                    p {
+                        font-weight: 700;
+
+                        &:last-child {
+                            font-weight: 600;
+                            color: gray;
+                        }
+                    }
+
+                    &>div {
+                        display: flex;
+                        padding: 5px 0;
+                    }
+                }
+            }
+
+            
+        }
+    }
+}

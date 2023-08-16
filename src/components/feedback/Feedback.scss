@@ -1,0 +1,151 @@
+.feedback{
+    position: fixed;
+    bottom: 0;
+    left: 2rem;
+    z-index: 1;
+    background-color: white;
+    width: 330px;
+    height: 500px;
+    box-shadow: rgba($color: #000000, $alpha: 0.1) 0 7px 7px;
+    &__1{
+        // height: 15vh;
+        position: relative;
+        background-color: red;
+        .hide-icon{
+            position: absolute;
+            color: aqua;
+            top: 10px;
+            right: 20px;
+            cursor: pointer;
+        }
+        .back-icon{
+            position: absolute;
+            color: aqua;
+            top: 12px;
+            left: 20px;
+            cursor: pointer;
+        }
+        .SearchBar{
+            padding: 0 !important;
+            border-radius: 8px;
+            height: 40px;
+            .icon{
+                height: 50px !important;
+                font-size: 30px !important;
+                font-weight: w00;
+            }
+            input{
+                font-size: 16px !important;
+            }
+        }
+    }
+    &__2{
+     max-height: 377px;
+     min-height: 320px;
+     overflow-y: scroll;
+     font-size: 15px;
+     ol{
+        li{
+            color: red;
+            .list{
+                text-decoration: none;
+                color: red;
+                font-size: 13px;
+            }
+            &:hover .list{
+                text-decoration: underline;
+            }
+        }
+
+     }
+     label{
+        font-weight: 700;
+        font-size: 13px;
+        span{
+            font-weight: 500;
+        }
+     }
+     .attachments{
+        div{
+            position: relative;
+            border: 2px solid lightgray;
+            border-style: dashed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            .icon{
+                width: 2.5rem;
+                font-size: 10px;
+                
+            }
+            input{
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                top: 0;
+                opacity: 0;
+            }
+        }
+     }
+     .form__footer{
+        box-shadow: rgba($color: #000000, $alpha: 0.1) 0px -2px 5px;
+        height: 70px;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        button{
+            
+            color: white;
+            background-color: red;
+            display: flex;
+            align-items: center;
+        }
+        p{
+            height: 100%;
+            display: flex;
+            align-items: end;
+            font-weight: 700;
+        }
+
+    }
+
+    &::-webkit-scrollbar{
+        width: 5px;
+    }
+    &::-webkit-scrollbar-thumb{
+        padding-right: 10px;
+        background-color: lightgray;
+    }
+    }
+    &__3{
+        box-shadow: rgba($color: #000000, $alpha: 0.1) 0px -2px 5px;
+        height: 10vh;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        button{
+            
+            color: white;
+            background-color: red;
+            display: flex;
+            align-items: center;
+        }
+        p{
+            height: 100%;
+            display: flex;
+            align-items: end;
+            font-weight: 700;
+        }
+
+    }
+}

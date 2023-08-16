@@ -1,0 +1,117 @@
+@import "../../assets/color";
+
+.ManageUsers{
+    background-color: $bg1;
+    font-size: 13px ;
+    .container-fluid{
+        max-width: 80%;
+        background-color: white;
+    }
+    &__table{
+        tr{
+            font-size: 13px !important;
+            height: 30px;
+        }
+        thead{
+            tr{
+                th{
+                    font-weight: 700 !important;
+                    color: black;
+                }
+            }
+        }
+        tbody{
+            tr{
+                border: 2px solid lightgray;
+                background-color: $apps;
+                td{
+                    color: white;
+                }
+            }
+        }
+    }
+    &__form{
+        .inputForm{
+            // align-items: center;
+            // height: 50px;
+            margin-top: 10px;
+            opacity: 0.9;
+            .lcol{
+                display: flex;
+                justify-content: end;
+                label{
+                    font-weight: 700;
+                }
+            }
+            .rcol{
+                // padding-left :23px;
+                align-items: center;
+                input, select{
+                    border: 0;
+                    width: 100%;
+                    outline: 0;
+                    border-bottom: 2px solid lightgray;
+                    padding:5px  0px;
+                    &:focus{
+                        border-bottom: 2px solid $apps;
+                    }
+                }
+                .link.active{
+                    background-color: $apps !important;
+                    color: white;
+                    border: 1px solid $apps;
+                    
+                }
+                
+            }
+        }
+            form{
+                .submit{
+                    background-color: $bg2;
+                    display: flex;
+                    justify-content: end;
+                    gap: 2;
+                    button{
+                        padding: 5px 10px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+            &__right{
+                .inputForm{
+                    .rcol{
+                        display: flex;
+                        // div{
+                        //     flex-basis: 50%;
+                        // }
+                        .radiobtn{
+                            position: relative;
+                            width: 50px;
+                            text-align: center;
+                            input[type=radio]{
+                                position: absolute;
+                                left: 0;
+                                right: 0;
+                                bottom: 0;
+                                top: 0;
+                                opacity: 0;
+                            }
+                            span{
+                                height: 100%;
+                                width: 100px;
+                                padding: 10px 15px;
+                            }
+                            input[type=radio]:checked + span{
+                                background-color: $apps;
+                                color: white;
+                            }
+                            
+                        }
+                    }
+                }
+            }
+    }
+    &__footer{
+        background-color: $bg2;
+    }
+}

@@ -1,0 +1,76 @@
+@import "../../assets/color";
+
+.ManageSubscription{
+    background-color: $bg1;
+    font-size: 13px ;
+    .container-fluid{
+        max-width: 80%;
+        background-color: white;
+        h6{
+            font-weight: 600;
+        }
+    }
+    &__plan{
+        &__items{
+            display: grid;
+            // grid-template-columns: repeat(5,1fr);
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+            gap: 1rem;
+        }
+        &__item{
+            border: 1px solid rgb(151, 150, 150);
+            position: relative;
+            .popular{
+                width: calc(100%);
+                position: absolute;
+                background-color: $apps;
+                top: -30px;
+                left: 0;
+                right: 0;
+                color: white;
+                font-size: 11px;
+                text-align: center;
+                font-weight: 300;
+                border-top-right-radius: 2px;
+                border-top-left-radius: 2px;
+            }
+            &>div{
+                min-height: 50px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .title{
+                    color: $apps;
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+                small{
+                    font-weight: 500;
+                    color: gray;
+                }
+                h4{
+                    font-weight: 600;
+                }
+                hr{
+                    max-height: 0.001rem;
+                }
+                .user{
+                    font-weight: 600;
+                }
+                .service{
+                    color: gray;
+                    font-weight: 600;
+                }
+                .link{
+                    width: 90%;
+                    background-color: $apps;
+                    color: white;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+}

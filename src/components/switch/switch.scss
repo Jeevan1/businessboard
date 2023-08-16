@@ -1,0 +1,39 @@
+/* Hide the default checkbox input */
+.toggle-switch input {
+    display: none;
+  }
+  
+  /* Style the slider */
+  .toggle-switch .slider {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: #ccc;
+    cursor: pointer;
+  }
+  
+  /* Style the slider when it's in the "on" state */
+  .toggle-switch input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  /* Style the circle inside the slider */
+  .toggle-switch .slider::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: white;
+    transition: transform 0.2s;
+  }
+  
+  /* Move the circle to the right when the switch is in the "on" state */
+  .toggle-switch input:checked + .slider::before {
+    transform: translateX(20px);
+  }
+  

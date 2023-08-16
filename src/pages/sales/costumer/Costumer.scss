@@ -1,0 +1,243 @@
+@import "../../../assets/color";
+
+.Costumer{
+    background-color: $bg2;
+    position: relative;
+    // height: fit-content;
+    &__top{
+        .header{
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 5px;
+            .header__link{
+                width: 130px;
+                color: gray ;
+                text-transform: capitalize;
+                padding: 13px 0;
+                position: relative;
+                text-decoration: none;
+                &::before{
+                    position: absolute;
+                    content: '';
+                    bottom: 0;
+                    left: 0%;
+                    right: 50%;
+                    top: 95%;
+                    height: 1px;
+                    
+                    background-color: rgb(255, 255, 255);
+                    animation: leftback 0.2s ease-in-out;
+                }
+                &::after{
+                    position: absolute;
+                    content: '';
+                    bottom: 0;
+                    left: 50%;
+                    right: 0;
+                    top: 95%;
+                    height: 1px;
+                    background-color: rgb(255, 255, 255);
+                    animation: rightback 0.2s ease-in-out;
+                }
+                @keyframes leftback {
+                    from{
+                        left: 0%;
+                        background-color: $sales;
+                    }
+                    to{
+                        left: 50%;
+                        background-color: $sales;
+                    }
+                }
+                @keyframes rightback {
+                    from{
+                        right: 0%;
+                        background-color: $sales;
+                    }
+                    to{
+                        right: 50%;
+                        background-color: $sales;
+                    }
+                }
+                
+            }
+            .active{
+                position: relative;
+                &::before{
+                    position: absolute;
+                    content: '';
+                    bottom: 0;
+                    left: 0%;
+                    right: 50%;
+                    top: 95%;
+                    height: 1px;
+                    background-color: $sales;
+                    animation: left 0.3s ease-in-out;
+                }
+                &::after{
+                    position: absolute;
+                    content: '';
+                    bottom: 0;
+                    left: 50%;
+                    right: 0;
+                    top: 95%;
+                    height: 1px;
+                    background-color: $sales;
+                    animation: right 0.3s ease-in-out;
+                }
+                @keyframes left {
+                    from{
+                        left: 50%;
+                    }
+                    to{
+                        left: 0;
+                    }
+                }
+                @keyframes right {
+                    from{
+                        right: 50%;
+                    }
+                    to{
+                        right: 0;
+                    }
+                }
+            }
+          }
+    }
+    &__content{
+        &__1{
+            button{
+                font-size: 14px;
+                color: rgba(255, 255, 255, 1);
+                background-color:$apps;
+                opacity: 1;
+
+            }
+            .icon{
+                background-color: white;
+                font-size: 35px;
+                width: 25px;
+            }
+        }
+        &__2{
+           &__right{
+            hr{
+                height: 30px;
+                padding: 1px;
+            }
+               div{
+                position: relative;
+                button{
+                    font-size: 13px;
+                    border: 1px solid lightgray;
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    &:hover{
+                        border: 1px solid $apps;
+                        color: $apps;
+                    }
+                    .icon{
+                        transform: rotate(90deg);
+                        padding: 0;
+                        font-size: 15px;
+                    }
+                }
+                
+                ul{
+                    position: absolute;
+                    min-width: 250px;
+                    right: 0;
+                    top: 100%;
+                    background-color: white;
+                    li{
+                        font-size: 13px;
+                        padding: 5px 20px;
+                        width: 100%;
+                        cursor: pointer;
+                        &:hover{
+                            background-color:$bg2;
+                        }
+                    }
+                    hr{
+                        padding: 0;
+                        margin: 5px 0 !important;
+                        height: 1px;
+                    }
+                }
+            }
+            .view{
+                display: flex;
+                align-items: center;
+                .icon{
+                    border: 1px solid gray;
+                    height: 30px;
+                    width: 50px;
+                    padding: 5px;
+                    &:first-child{
+                        border-top-left-radius: 7px;
+                        border-bottom-left-radius: 7px;
+                        &:hover{
+                            border: 1px solid $apps;
+                            color: $apps;
+                        }
+                    }
+                    &:last-child{
+                        border-top-right-radius: 7px;
+                        border-bottom-right-radius: 7px;
+                        &:hover{
+                            border: 1px solid $apps;
+                            color: $apps;
+                        }
+                    }
+                }
+                .icon.active{
+                    border: 1px solid $apps;
+                    color: $apps;
+
+                }
+            }
+           } 
+        }
+        &__3{
+            .costumer__title{
+                .costumer__id{
+                    font-size: 14px;
+                }
+            }
+            .costumer__delete{
+                background-color: $bg1;
+            }
+
+            table{
+                width: 100%;
+                thead{
+                    background-color: white;
+                    tr{
+                        th{
+                            font-size: 13px;
+                            opacity: 0.8;
+                            padding: 10px 15px;
+                        }
+                    }
+                }
+                tbody{
+                    tr{
+                        td{
+                            font-size: 13px;
+                            padding: 10px 15px;
+                            border-top: 1px solid lightgray;
+                            .icon{
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                    tr:nth-child(odd){
+                        background-color: $bg2;
+                    }
+                    tr:nth-child(even){
+                        background-color: white;
+                    }
+                }
+            }
+        }
+    }
+}

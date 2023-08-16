@@ -1,0 +1,98 @@
+@import "../../assets/color";
+
+.ImportLeads {
+    min-height: 100vh;
+    background-color: $bg1;
+
+    &__header {
+        height: 60px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        position: sticky;
+        top: 0;
+
+        button {
+            height: 80%;
+            font-size: 20px;
+
+            &:hover {
+                background-color: $bg3;
+            }
+        }
+
+        h4 {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    &__form {
+        width: 65%;
+        margin: 20px auto;
+        background-color: white;
+        font-size: 13px;
+        margin-bottom: 60px;
+
+        &__1{
+            background-color: rgba($purchase, $alpha: 0.2);
+            opacity: 0.8;
+            p{
+                padding: 9px 0;
+            }
+        }
+        &__2{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            div{
+                position: relative;
+                color: $apps;
+                width: fit-content;
+                input{
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    top: 0;
+                    opacity: 0;
+                    
+                }
+                span{
+                    padding: 5px 13px;
+                }
+                input:hover + span{
+                    cursor: pointer;
+                    background: $apps;
+                    color: white;
+                }
+            }
+        }
+        &__submit {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: white;
+
+            div {
+                width: 67%;
+                margin: auto;
+                display: flex;
+                justify-content: end;
+                gap: 10px;
+
+                button {
+                    border: 1px solid $bg3;
+                    padding: 10px 15px;
+                    border-radius: 5px;
+
+                    &:last-child {
+                        background-color: $apps;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}

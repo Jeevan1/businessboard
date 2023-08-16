@@ -1,0 +1,239 @@
+@import "../../../assets/color";
+
+.PurchaseOrder{
+    background-color: $bg2;
+    position: relative;
+    // height: fit-content;
+    
+    &__content{
+        &__1{
+            button{
+                font-size: 14px;
+                color: rgba(255, 255, 255, 1);
+                background-color:$apps;
+                opacity: 1;
+
+            }
+            .icon{
+                background-color: white;
+                font-size: 35px;
+                width: 25px;
+            }
+        }
+        &__2{
+           &__right{
+            hr{
+                height: 30px;
+                padding: 1px;
+            }
+               div{
+                position: relative;
+                button{
+                    font-size: 13px;
+                    border: 1px solid lightgray;
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    &:hover{
+                        border: 1px solid $apps;
+                        color: $apps;
+                    }
+                    .icon{
+                        transform: rotate(90deg);
+                        padding: 0;
+                        font-size: 15px;
+                    }
+                }
+                
+                ul{
+                    position: absolute;
+                    min-width: 250px;
+                    right: 0;
+                    top: 100%;
+                    background-color: white;
+                    li{
+                        font-size: 13px;
+                        padding: 5px 20px;
+                        width: 100%;
+                        cursor: pointer;
+                        &:hover{
+                            background-color:$bg2;
+                        }
+                    }
+                    hr{
+                        padding: 0;
+                        margin: 5px 0 !important;
+                        height: 1px;
+                    }
+                }
+            }
+            .view{
+                display: flex;
+                align-items: center;
+                .icon{
+                    border: 1px solid gray;
+                    height: 30px;
+                    width: 50px;
+                    padding: 5px;
+                    &:first-child{
+                        border-top-left-radius: 7px;
+                        border-bottom-left-radius: 7px;
+                        &:hover{
+                            border: 1px solid $apps;
+                            color: $apps;
+                        }
+                    }
+                    &:last-child{
+                        border-top-right-radius: 7px;
+                        border-bottom-right-radius: 7px;
+                        &:hover{
+                            border: 1px solid $apps;
+                            color: $apps;
+                        }
+                    }
+                }
+                .icon.active{
+                    border: 1px solid $apps;
+                    color: $apps;
+
+                }
+            }
+           } 
+        }
+        &__3{
+            display: flex;
+            gap: 5px;
+            background-color: white;
+            .category{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 7px;
+                padding: 7px 0px;
+                cursor: pointer;
+                width: 150px;
+                div{
+                    display: flex;
+                    align-items: center;
+                    gap: 7px;
+                    font-size: 14px;
+                    span{
+                        min-width: 30px;
+                        border-radius: 20px;
+                        text-align: center;
+                        border: 2px solid gray;
+                    }
+                }
+                p{
+                    text-align: center;
+                }
+            }
+            .category.active{
+                color: $apps;
+                font-weight: 600;
+                border-bottom: 2px solid $apps;
+                span{
+                    background-color: $apps;
+                    border: 0;
+                    color: white;
+                }
+            }
+        }
+        &__4{
+           .order__item{
+            padding: 0px 0px;
+            &>div{
+                padding: 010px 15px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-weight: 500;
+                .icon{
+                    cursor: pointer;
+                }
+            }
+            &__1{
+                h6{
+                    color: $apps;
+                }
+                small{
+                    color: gray;
+                }
+            }
+            &__2{
+                padding: 010px 15px;
+                font-size: 14px;
+                color: gray;
+                font-weight: 600;
+            }
+            &__3{
+                p{
+                    &:first-child{
+                        padding: 1px 5px;
+                        font-size: 12px;
+                        color: red;
+                        background-color: rgba(red, $alpha: 0.1);
+                    }
+                    &:last-child{
+                        font-size: 15px;
+                    }
+                }
+            }
+            &__4{
+                background-color: $bg2;
+                div{
+                    display: flex;
+                    align-items: center;
+                    gap:5px;
+                    &:last-child{
+                        gap: 15px;
+                    }
+                }
+            }
+           } 
+        }
+        // &__3{
+        //     .costumer__title{
+        //         .costumer__id{
+        //             font-size: 14px;
+        //         }
+        //     }
+        //     .costumer__delete{
+        //         background-color: $bg1;
+        //     }
+
+        //     table{
+        //         width: 100%;
+        //         thead{
+        //             background-color: white;
+        //             tr{
+        //                 th{
+        //                     font-size: 13px;
+        //                     opacity: 0.8;
+        //                     padding: 10px 15px;
+        //                 }
+        //             }
+        //         }
+        //         tbody{
+        //             tr{
+        //                 td{
+        //                     font-size: 13px;
+        //                     padding: 10px 15px;
+        //                     border-top: 1px solid lightgray;
+        //                     .icon{
+        //                         cursor: pointer;
+        //                     }
+        //                 }
+        //             }
+        //             tr:nth-child(odd){
+        //                 background-color: $bg2;
+        //             }
+        //             tr:nth-child(even){
+        //                 background-color: white;
+        //             }
+        //         }
+        //     }
+        // }
+    }
+}

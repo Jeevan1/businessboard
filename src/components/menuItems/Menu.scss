@@ -1,0 +1,30 @@
+.menu{
+    grid-area: menu;
+    position: fixed;
+    font-size: 14px !important;
+    top: 50px;
+    width: 100%;
+    height: 100%;
+    &__items{
+        outline: none;
+       .link{
+        outline: hidden;
+        .menu__icon{
+            color: gray !important;
+        }
+        .menu__name{
+            color: gray;
+        }
+       }
+       .active{
+        outline: hidden;
+        .menu__icon{
+            color: inherit !important ;
+        }
+        .menu__name{
+            color: black;
+            font-weight: 600;
+        }
+       }
+    }
+}
