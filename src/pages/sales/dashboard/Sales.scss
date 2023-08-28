@@ -15,12 +15,35 @@
                 width: 65%;
                 margin: auto;
             }
+
             &__left{
                 // filter: contrast(1);
             }
             &__right{
                 img{
                     height: 250px;
+                }
+            }
+            @media(max-width: 1080px){
+                .row{
+                    width: 80%;
+                }
+            }
+            @media(max-width: 1000px){
+                &__right{
+                    display: none;
+                }
+            }
+            @media(max-width: 480px){
+                height: fit-content;
+                .row{
+                    width: 95%;
+                    p{
+                        font-size: 14px;
+                    }
+                    .link{
+                        font-size: 14px;
+                    }
                 }
             }
             .link{

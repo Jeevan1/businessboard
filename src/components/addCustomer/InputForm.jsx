@@ -49,10 +49,10 @@ export const InputQuotesForm = ({ label, style, err, type, mainStyle }) => {
       className="InputForm px-2 d-flex w-100 gap-4"
       style={{ height: "50px" }}
     >
-      <label htmlFor={`${label}`} className={`d ${style}`}>
+      <label htmlFor={`${label}`} className={` ${style}`}>
         {label}
       </label>
-      <div className="h-70  border-bottom ">
+      <div className="h-70  border-bottom w-75">
         <input
           type={type}
           name={label}

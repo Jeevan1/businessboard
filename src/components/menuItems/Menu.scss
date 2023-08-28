@@ -28,3 +28,47 @@
        }
     }
 }
+.mobile__menu{
+    display: none;
+    position: fixed;
+    font-size: 14px !important;
+    top: 50px;
+    left: -10px;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background-color: rgba($color: #000000, $alpha: 0.2);
+    &>div{
+        background-color: white;
+        height: 100%;
+        width: 75%;
+    }
+    &__items{
+        outline: none;
+       .link{
+        outline: hidden;
+        .menu__icon{
+            color: gray !important;
+        }
+        .menu__name{
+            color: gray;
+        }
+       }
+       .active{
+        outline: hidden;
+        .menu__icon{
+            color: inherit !important ;
+        }
+        .menu__name{
+            color: black;
+            font-weight: 600;
+        }
+       }
+    }
+}
+@media(max-width: 778px){
+    .mobile__menu{
+display: block;
+    }
+}
+

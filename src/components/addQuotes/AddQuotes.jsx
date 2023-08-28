@@ -46,8 +46,8 @@ function AddQuotes() {
       <div className="AddQuotes__form rounded">
         <form action="" className="py-3 px-4">
           <div className="AddQuotes__form__1">
-            <div className="AddQuotes__form__1__right">
-              <div className="input__form">
+            <div className="AddQuotes__form__1__right d-flex flex-wrap ">
+              <div className="input__form ">
                 <InputQuotesForm label={"Company Name"} type={"text"} />
               </div>
               <div className="input__form">

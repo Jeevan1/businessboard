@@ -20,7 +20,18 @@
             z-index: -1;
             .chooseImg{
                 display: flex;
+                flex-wrap: wrap;
                 justify-content: center;
+                .row:first-child{
+                    @media(max-width:480px){
+                        .col-4{
+                            display: none;
+                        }
+                        .col-8{
+                            flex-basis: 100%;
+                        }
+                    }
+                }
                 .form__input{
                     width: 100%;
                     border: 1px solid gray;

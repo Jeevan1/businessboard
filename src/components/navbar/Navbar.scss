@@ -90,5 +90,15 @@
                 border: 0.00000001rem solid gray;
             }
         }
+        @media(max-width: 480px){
+            .messages{
+                display: none;
+            }
+        }
+    }
+    @media(max-width: 778px){
+        .SearchBar{
+            display: none;
+        }
     }
 }

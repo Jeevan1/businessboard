@@ -84,7 +84,7 @@ function Sales() {
         <div className="Sales__content p-3 ">
           <div className="Sales__content__1 py-5 rounded">
             <div className="row">
-              <div className="Sales__content__1__left col-lg-6 text-white">
+              <div className="Sales__content__1__left col-lg-6 col-sm-12 text-white">
                 <h6 className=" text-uppercase">Oneup sales</h6>
                 <h2 className="pt-2 fw-light">Master invoicing and payments</h2>
                 <p className="py-4 fw-light">
@@ -99,7 +99,7 @@ function Sales() {
                   Create Your first invoice
                 </Link>
               </div>
-              <div className="Sales__content__1__right col-lg-6">
+              <div className="Sales__content__1__right col-lg-6 col-sm-12">
                 <img src="./img/img/home_lap_mob.png" alt="" />
               </div>
             </div>
@@ -144,8 +144,6 @@ function Sales() {
         </div>
       </div>
       <div>
-        <VatRates />
-        <PayenmentTerms />
       </div>
     </div>
   );

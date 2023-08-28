@@ -40,6 +40,7 @@
             padding: 10px 0px;
             display: flex;
             gap: 30px;
+            
             // justify-content: space-between;/
             // flex-wrap: wrap;
             .input__form{
@@ -87,9 +88,11 @@
                 margin: 20px 0;
                 thead,tbody{
                     justify-content: space-between;
+                    
                     // padding: 15px 0;
                     tr{
                         height: 40px;
+                        
                         td{
                         }
                     }

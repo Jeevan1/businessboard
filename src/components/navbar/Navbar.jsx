@@ -10,6 +10,7 @@ import "./Navbar.scss";
 import SearchBar from "../SearchBar";
 import Feedback from "../feedback/Feedback";
 import { Link, NavLink, useLocation } from "react-router-dom";
+import { useMobileMenuContext } from "../context/Context";
 
 function Navbar({menuname,setMenuName}) {
   const [show, setShow] = useState({
@@ -17,18 +18,19 @@ function Navbar({menuname,setMenuName}) {
     profile: false,
     setting: false,
   });
+  const [mobileMenu,setMobileMenu] = useMobileMenuContext();
   const loc = useLocation();
   return (
     <div className="Navbar border-bottom d-flex">
       <div className="container-fluid d-flex justify-content-between ps-4 pe-0">
         <div className="Navbar__1 d-flex align-items-center gap-4">
-          <GrMenu className="icon fs-4" onClick={() => setMenuName(!menuname)}/>
+          <GrMenu className="icon fs-4" onClick={() => {setMenuName(!menuname), setMobileMenu(!mobileMenu)}}/>
           <Logo height={"25px"} />
           {loc.pathname!='/home' && <SearchBar width={"400px"} style={"bg-light shadow-sm border rounded-1"} placeholder={'What do you want to do?'}/>}
         </div>
         <div className="Navbar__2 d-flex align-items-center  fs-4">
           <RiQuestionnaireLine
-            className="icon"
+            className="icon messages"
             onClick={() => setShow({ feedback: !show.feedback })}
           />
           <div className="setting ">

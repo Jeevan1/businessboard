@@ -4,7 +4,7 @@
     // top: 0; /* Stick to the top of the container */
     background-color: white;
     height: 50px;
-    z-index: 999;
+    // z-index: 999;
     font-size: 15px;
     .Header-top{
         height: 100%;
@@ -167,4 +167,23 @@
         }
     }
     
+}
+@media(max-width: 778px){
+    .Header{
+        width: 100% !important;
+        .Header-top{
+            justify-content: start !important;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            .header__link{
+                min-width: 100px;
+            }
+            &::-webkit-scrollbar{
+                height: 5px;
+            }
+            &::-webkit-scrollbar-thumb{
+                color: red;
+            }
+        }
+    }
 }

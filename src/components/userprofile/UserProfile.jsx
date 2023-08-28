@@ -69,7 +69,7 @@ function UserProfile({ label }) {
                   <h1>JS</h1>
                   <p>
                     <p>You can upload a new profile picture here</p>
-                    <p>
+                    <p className=" ">
                       You can also drag and drop a picture from your computer.
                       <br />
                       Recommended file types: .GIF, .PNG, or .JPG less than 1

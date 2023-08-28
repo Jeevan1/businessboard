@@ -50,9 +50,9 @@ function PurchaseOrder() {
           <div className="PurchaseOrder__content__1 d-flex justify-content-between align-items-center">
             <h5 className="">PurchaseOrders</h5>
             <div className=" d-flex gap-2">
-              <button className=" rounded px-3 py-2">
+              <Link to={'/automatic_inventory'}><button className=" rounded px-3 py-2">
                 Automatic Inventory Ordering
-              </button>
+              </button></Link>
               <div className="rightLinks">
                 <BsThreeDotsVertical className="icon p-1 rounded border" onClick={() => setShow({menu: !show.menu})}/>
                {show.menu &&  <div className='border border-black bg-white shadow py-1'>

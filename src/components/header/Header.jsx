@@ -73,7 +73,7 @@ function Header({ data, rightLinks, moreLinks,menuLinks }) {
         </div>
         {active.rightHeader && <div className="header__2__links border py-1">
           {menuLinks.map((item, idx) => (
-            <Link className="link px-3 py-2" key={idx}>
+            <Link to={item.link} className="link px-3 py-2" key={idx}>
               {item.name}
             </Link>
           ))}

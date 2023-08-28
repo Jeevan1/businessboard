@@ -126,4 +126,37 @@
             }
         }
     }
+    @media(max-width: 1000px){
+        &__form{
+            width: 80%;
+        }
+    }
+    @media(max-width: 720px){
+        &__form{
+            width: 95%;
+        }
+    }
+    @media(max-width: 480px){
+        &__form{
+            form{
+                padding: 10px !important;
+            }
+            &__1{
+                display: block;
+                &__left{
+                    padding-bottom: 10px;
+                    text-align: start;
+                }
+            }
+            &__advanced{
+                .AddLead__form__1{
+                    &__right{
+                        .input__form{
+                            flex-wrap: wrap;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

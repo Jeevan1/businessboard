@@ -8,8 +8,8 @@ import { GrAttachment } from "react-icons/gr";
 
 import "./NewMemo.scss";
 import { InputForm, InputOption } from "../addCustomer/InputForm";
-import ProductsAndServices from "../productsAndServices/ProductsAndServices";
 import NewItemHeader from "../newItemHeader/NewItemHeader";
+import ProductsAndServices from "../newProductsAndServices/ProductsAndServices";
 
 function NewMemo() {
   const [advanced, setAdvanced] = useState(false);

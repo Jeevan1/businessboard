@@ -6,6 +6,11 @@
     .container{
         height: 100%;
     }
+    @media(max-width: 1080px){
+        .container{
+            width: 100% !important;
+        }
+    }
     &__top{
         .header{
             box-shadow: rgba(0, 0, 0, 0.15) 0px 20px 0px;
@@ -113,6 +118,11 @@
             width: 60% !important;
             margin: auto;
 
+        }
+        @media(max-width: 1080px){
+            .row{
+                width: 95% !important;
+            }
         }
         .link{
             box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;

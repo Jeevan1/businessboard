@@ -44,7 +44,7 @@ import Attachments from "./components/attachments/Attachments";
 import NewMemo from "./components/newMemo/NewMemo";
 import ResetAccount from "./components/resetAccount/ResetAccount";
 import DeleteAccount from "./components/deleteAccount/DeleteAccount";
-import { useExportItemContext, useMenuContext } from "./components/context/Context";
+import { useExportItemContext, useMenuContext, useMobileMenuContext } from "./components/context/Context";
 import SalesOrder from "./pages/inventory/salesOrder/SalesOrder";
 import NewSalesOrder from "./components/newSalesOrder/NewSalesOrder";
 import RecevingNotes from "./pages/inventory/recevingNotes/RecevingNotes";
@@ -57,6 +57,18 @@ import ExportItems from "./components/exportItems/ExportItems";
 import NewOpportunity from "./components/newOpportunity/NewOpportumity";
 import NewTasks from "./components/newTasks/NewTasks";
 import NewCalls from "./components/newCalls/NewCalls";
+import VatRates from "./pages/sales/vatRates/VatRates";
+import PayenmentTerms from "./pages/sales/payenmentTerms/PayenmentTerms";
+import Payenment from "./pages/sales/payenments/Payenment";
+import SalesReceipts from "./pages/sales/salesReceipt/SalesReceipts";
+import CreditMemo from "./pages/sales/creditMemo/CreditMemo";
+import Projects from "./pages/sales/Projects/Projects";
+import ProductService from "./pages/sales/productService/ProductService";
+import ProductsAndServices from "./components/newProductsAndServices/ProductsAndServices";
+import AddSupplier from "./components/addSupplier/AddSupplier";
+import Accounting from "./pages/accounting/Accounting";
+import BankAccount from "./pages/accounting/bankAccount/BankAccount";
+import MobileMenu from "./components/menuItems/MobileMenu";
 
 
 const ShowName = {
@@ -71,11 +83,13 @@ function App() {
   const [exportItem,setExportItem] = useExportItemContext();
   // const [state] = useMenuContext();
   const [menuname,setMenuName] = useMenuContext();
+  const [mobileMenu,setMobileMenu] = useMobileMenuContext();
   const Layout = () => {
     return (
       <div className="app" style={menuname?ShowName:HideName}>
         <Navbar menuname={menuname} setMenuName = {setMenuName}/>
         <Menu menuname={menuname} setMenuName = {setMenuName}/>
+        <MobileMenu mobileMenu={mobileMenu} setMobileMenu = {setMobileMenu}/>
         <div className="main__body d-flex position-relative">
           <Outlet />
         </div>
@@ -137,7 +151,34 @@ function App() {
           path: "/sales/invoice",
           element: <Invoive />,
         },
-
+        {
+          path: "/vat_rates",
+          element: <VatRates />,
+        },
+        {
+          path: "/projects",
+          element: <Projects />,
+        },
+        {
+          path: "/product_service",
+          element: <ProductService />,
+        },
+        {
+          path: "/payenment_terms",
+          element: <PayenmentTerms />,
+        },
+        {
+          path: "/customer_payenment",
+          element: <Payenment />,
+        },
+        {
+          path: "/sales_receipts",
+          element: <SalesReceipts />,
+        },
+        {
+          path: "/credit_memo",
+          element: <CreditMemo />,
+        },
         {
           path: "/apps",
           element: <Apps />,
@@ -154,6 +195,14 @@ function App() {
         {
           path: "/inventory",
           element: <Stock />,
+        },
+        {
+          path: "/accounting",
+          element: <Accounting />,
+        },
+        {
+          path: "/bank_account",
+          element: <BankAccount />,
         },
         {
           path: "/sales_order",
@@ -233,6 +282,14 @@ function App() {
     {
       path: "/new/costumer",
       element: <AddCustomer />,
+    },
+    {
+      path: "/new/supplier",
+      element: <AddSupplier />,
+    },
+    {
+      path: "/new/product_services",
+      element: <ProductsAndServices />,
     },
     {
       path: "/new/invoice",

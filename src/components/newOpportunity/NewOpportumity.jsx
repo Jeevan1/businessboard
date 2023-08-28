@@ -8,8 +8,8 @@ import { GrAttachment } from "react-icons/gr";
 
 import "./NewOpportunity.scss";
 import { InputForm, InputOption } from "../addCustomer/InputForm";
-import ProductsAndServices from "../productsAndServices/ProductsAndServices";
 import NewItemHeader from "../newItemHeader/NewItemHeader";
+import ProductsAndServices from "../newProductsAndServices/ProductsAndServices";
 
 function NewOpportunity() {
   const [advanced, setAdvanced] = useState(false);
@@ -31,7 +31,7 @@ function NewOpportunity() {
     <>
       <div className="NewOpportunity">
       <NewItemHeader name={'New Opportunities'}/>
-        <div className="NewOpportunity__form rounded">
+        <div className="NewOpportunity__form rounded form__wrapper">
           <form action="" className="py-2 px-4">
             <div className="NewOpportunity__form__1">
               <div className="input__form">

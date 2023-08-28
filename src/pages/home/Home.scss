@@ -1,7 +1,7 @@
 @import "../../assets/color";
 
 .home{
-    min-height: calc(100vh - 3.5rem);
+    height: 100px;
     width: 100%;
     &__right{
         min-height: calc(100vh - 3rem);
@@ -39,24 +39,48 @@
                             bottom: 30%;
                         }
                     }
+                    @media(max-width: 720px){
+                        &>div{
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            transition: 0.4s;
+                        }
+                        small{
+                            display: none;
+                        }
+                        &:hover{
+                            &>div{
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            transition: 0.4s;
+                            }
+                            small{
+                                bottom: 30%;
+                            }
+                        }
+                    }
+                }
+            }
+            @media(max-width: 440px){
+                .apps{
+                    &__item{
+                        width: 100px;
+    
+                    }
                 }
             }
         }
-        @media(max-width: 900px){
-            &>div{
-                width: 500px;
-            }
-        }
-        @media(max-width: 800px){
-            &>div{
-                width: 400px;
-            }
-        }
-        @media(max-width: 720px){
-            &>div{
-                width: 250px;
-            }
-        }
+       
+       
+        // @media(max-width: 720px){
+        //     &>div{
+        //         width: 250px;
+        //     }
+        // }
     }
     @media(max-width: 550px){
         &__left{

@@ -87,12 +87,12 @@ function Home() {
               placeholder={"What do you want to do?"}
               style={"bg-light shadow-sm border rounded-1"}
             />
-            <div className="apps py-4">
+            <div className="apps py-4 px-2">
               <p className="">Apps</p>
               <div className="row flex-wrap">
                 {apps.map((item, idx) => (
                   <div
-                    className="col-lg-4 col-md-6 col-sm-6 py-2 m-0 px-2"
+                    className="col-lg-4 col-md-4 col-sm-6 col-6 py-2 m-0 px-2"
                     key={idx}
                   >
                     <Link to={`/${item.link}`}>

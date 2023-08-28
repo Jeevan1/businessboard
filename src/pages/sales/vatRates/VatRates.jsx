@@ -2,6 +2,8 @@ import React from "react";
 import { TbArrowBigLeft, TbArrowBigRight } from "react-icons/tb";
 import {AiOutlineCloudDownload} from "react-icons/ai";
 import "./VatRates.scss";
+import Header from "../../../components/header/Header";
+import { useMenuItemContext } from "../../../components/context/Context";
 
 const vatRates = [
   {
@@ -26,8 +28,15 @@ const vatRates = [
   },
 ];
 function VatRates() {
+  const links = useMenuItemContext();
+  const ownLinks = links[2].subLinks;  
+
+  const rightLinks = ownLinks[0].subLinks;
+  const moreLinks = links[2].moreLinks;
   return (
-    <div className="VatRates bg-white mt-3 shadow-sm rounded">
+    <div className="VatRates border-start w-100">
+      <Header data={ownLinks} rightLinks={rightLinks} moreLinks={moreLinks}/>
+      <div className="container-fluid  bg-white mt-3 shadow-sm rounded">
       <div className="VatRates__top d-flex px-3 justify-content-between py-3 align-items-center">
         <h4>VAT Rates</h4>
         <button className=" rounded-1">New Vat Rates</button>
@@ -65,6 +74,7 @@ function VatRates() {
             <AiOutlineCloudDownload className="icon fs-5" />   
         </span>
       </div>
+    </div>
     </div>
   );
 }

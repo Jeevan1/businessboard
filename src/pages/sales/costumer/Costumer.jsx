@@ -31,7 +31,6 @@ function Costumer() {
   const links = useMenuItemContext();
   const ownLinks = links[2].subLinks; 
   const menuLinks = links[2].menuLinks; 
-  console.log(menuLinks)
   const rightLinks = ownLinks[1].subLinks;
   const moreLinks = links[2].moreLinks;
 
@@ -60,7 +59,7 @@ function Costumer() {
               </div>
             </div>
           </div>
-          <div className="Costumer__content__2 py-1 px-2 my-3 d-flex align-items-center justify-content-between border bg-white">
+          <div className="Costumer__content__2 py-1 px-2 my-3 d-flex align-items-center justify-content-between border bg-white flex-wrap">
             <div className="Costumer__content__2__left border-0">
               <SearchBar
                 placeholder={"Search in Costumers"}
@@ -68,7 +67,7 @@ function Costumer() {
                 style={"shadow-none"}
               />
             </div>
-            <div className="Costumer__content__2__right d-flex gap-2">
+            <div className="Costumer__content__2__right d-flex gap-2 flex-wrap">
               <div>
                 <button
                   className="py-1 px-2"

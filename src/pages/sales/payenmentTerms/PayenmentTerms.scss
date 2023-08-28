@@ -1,64 +1,81 @@
 @import "../../../assets/color";
-.PayenmentTerms{
-    margin-top: 30px;
-    width: 75%;
-    margin: auto;
-    font-size: 14px;
-    &__top{
-        button{
+
+.PayenmentTerms {
+    .container-fluid {
+        margin-top: 30px;
+        width: 75%;
+        margin: auto;
+        font-size: 14px;
+        position: relative;
+        top: 50px;
+    }
+
+    &__top {
+        button {
             background-color: $apps;
             color: white;
             padding: 7px 10px;
             cursor: pointer;
         }
     }
-    &__search{
+
+    &__search {
         border-bottom: 1px solid lightgray;
-        input{
+
+        input {
             border: 0;
             outline: none;
             width: 100%;
         }
     }
-    &__list{
-        table{
+
+    &__list {
+        table {
             border: 0;
-            tr{
+
+            tr {
                 border: 0;
                 border-bottom: 1px solid lightgray;
                 height: 35px;
             }
-            thead{
-                tr{
-                  color: black;
-                  font-size: 13px;
-                  border-bottom: 2px solid lightgray;
+
+            thead {
+                tr {
+                    color: black;
+                    font-size: 13px;
+                    border-bottom: 2px solid lightgray;
                 }
             }
-            tbody{
-                tr{
-                    &:nth-child(odd){
+
+            tbody {
+                tr {
+                    &:nth-child(odd) {
                         background-color: $bg2;
                     }
                 }
             }
         }
     }
-    &__page{
-        .icon{
+
+    &__page {
+        .icon {
             color: gray;
             cursor: pointer;
-            &:hover{
+
+            &:hover {
                 color: $apps;
             }
         }
     }
-    &__footer{
+
+    &__footer {
         background-color: $bg1;
         color: $apps;
-        span{
+
+        span {
             cursor: pointer;
-            &:hover{
+
+            &:hover {
                 background-color: $apps;
                 color: white;
             }

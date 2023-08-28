@@ -3,6 +3,8 @@ import { TbArrowBigLeft, TbArrowBigRight } from "react-icons/tb";
 import {AiOutlineCloudDownload} from "react-icons/ai";
 
 import "./PayenmentTerms.scss";
+import { useMenuItemContext } from "../../../components/context/Context";
+import Header from "../../../components/header/Header";
 
 const PayenmntTerms = [
   {
@@ -37,8 +39,15 @@ const PayenmntTerms = [
   },
 ];
 function PayenmentTerms() {
+  const links = useMenuItemContext();
+  const ownLinks = links[2].subLinks;  
+
+  const rightLinks = ownLinks[0].subLinks;
+  const moreLinks = links[2].moreLinks;
   return (
-    <div className="PayenmentTerms bg-white mt-3 shadow-sm rounded">
+    <div className="PayenmentTerms w-100 border-start">
+      <Header data={ownLinks} rightLinks={rightLinks} moreLinks={moreLinks}/>
+      <div className="container-fluid  bg-white mt-3 shadow-sm rounded">
       <div className="PayenmentTerms__top d-flex px-3 justify-content-between py-3 align-items-center">
         <h4>Edit Payenment Terms</h4>
         <button className=" rounded-1">New Payenment Terms</button>
@@ -74,6 +83,7 @@ function PayenmentTerms() {
             <AiOutlineCloudDownload className="icon fs-5" />   
         </span>
       </div>
+    </div>
     </div>
   );
 }

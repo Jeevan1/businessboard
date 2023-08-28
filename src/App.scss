@@ -43,10 +43,61 @@ ul,li{
     'Navbar Navbar'
     'menu content' ;
     position: relative;
+
   .main__body{
     min-height: 83vh;
     grid-area: content;
     display: none;
+  }
+}
+@media(max-width: 778px){
+  .app{
+    grid-template-areas: 
+    'Navbar Navbar'
+    'content content' ;
+  }
+  .container-fluid{
+    &>div{
+      width: 100%;
+    }
+  }
+  div:has(> form){
+    width: 90% !important;
+  }
+  form{
+
+    &>div{
+      display: flex;
+    flex-direction: column;
+    }
+    
+    .input__form{
+      display: flex;
+      flex-direction: column;
+      width: 100% !important;
+      &>div{
+        display: flex;
+        flex-direction: column;
+      }
+      button{
+        height: 50px;
+      }
+    }
+    .InputForm{
+      display:  flex;
+      width: 100% !important;
+      flex-wrap: wrap;
+      label{
+        // width: 100%;
+      }
+      select{
+        width: 100%;
+      }
+      
+    }
+    textarea{
+      display: block;
+    }
   }
 }
 table{
@@ -54,10 +105,12 @@ table{
   font-size: 12px;
   color: gray;
   margin-top: 20px;
+  
   thead{
+    width: 100%;
     background: #fff;
   }
-    tr{
+  tr{
       height: 50px;
       border: 1px solid lightgray;
       th,td{
@@ -65,6 +118,9 @@ table{
         padding: 0 20px;
       }
   }
+}
+div:has(> table){
+  overflow-x: auto;
 }
 
 .sub__subLinks{

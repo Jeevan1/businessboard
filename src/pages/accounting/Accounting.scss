@@ -1,0 +1,72 @@
+@import "../../assets/color";
+.Accounting{
+    background-color: $bg2;
+    &__content{
+        font-weight: 600;
+        font-size: 14px;
+        height: fit-content;
+        padding-top: 20px;
+        .container{
+            background-color: white;
+        }
+        &__header{
+            &__2{
+                >div{
+                    padding: 5px 10px;
+                    cursor: pointer;
+                    border: 1px solid white;
+                    &>div{
+                        position: relative;
+
+                    }
+                    .sub__links{
+                        z-index: 1;
+                        position: absolute;
+                        top: 100%;
+                        right: 5%;
+                        background-color: white;
+                        // width: 400px;
+                        display: flex;
+                        flex-direction: column;
+                        span{
+                            border: 1px solid lightgray;
+                            padding: 5px 10px;
+                        }
+                    }
+                    &:hover{
+                        border: 1px solid lightgray;
+                    }
+                }
+            }
+        }
+        @media(max-width:650px){
+            &__header{
+                display: flex;
+                flex-direction: column;
+                
+            }
+        }
+        &__data{
+            .data{
+                &__1{
+                    cursor: pointer;
+                    border-radius: 5px;
+                    &:hover{
+                        border: 1px solid blue !important;
+                    }
+                }
+            }
+        }
+        .highcharts-title{
+            display: none;
+        }
+    }
+    @media(max-width:720px){
+        .row{
+           padding: 0 !important;
+        }
+        &__content{
+            padding: 0 !important;
+        }
+    }
+}

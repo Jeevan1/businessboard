@@ -111,46 +111,46 @@ export const menuItems = [
     active: true,
     moreLinks:[
       {
-        name: "Sales Ordaer",
+        name: "Sales Order",
         link:"/sales_order",
       },
       {
         name: "Projects",
-        link:"",
+        link:"/projects",
       },
       {
         name: "Product and Services",
-        link:"",
+        link:"/product_service",
       },
       {
-        name: "Costumer Payenments",
-        link:"",
+        name: "Customer Payenments",
+        link:"/customer_payenment",
       },
       {
         name: "Sales Receipts",
-        link:"",
+        link:"/sales_receipts",
       },
       {
         name: "Credit Memos",
-        link:"",
+        link:"/credit_memo",
       },
     ],
     menuLinks :[
       {
-        name: "Products",
-        link: "./",
+        name: "Vat Rates",
+        link: "/vat_rates",
       },
       {
-        name: "Purchase price list",
+        name: "Sales price list",
         link: "costumer",
       },
       {
-        name: "VAT Rates",
+        name: "Discount Catelouge",
         link: "quotes",
       },
       {
-        name: "Customise Category",
-        link: "invoices",
+        name: "Edit Payenment Terms",
+        link: "/payenment_terms",
       },
     ],
     subLinks: [
@@ -400,7 +400,7 @@ export const menuItems = [
       },
       {
         name: "Sales Orders",
-        links: "/tasks",
+        links: "/sales_order",
         subLinks: [
           {
             name: "Convert Sales Orders To Invoices",
@@ -430,7 +430,7 @@ export const menuItems = [
       },
       {
         name: "Receiving Notes",
-        links: "/calls",
+        links: "/receiving_notes",
         subLinks: [
           {
             name: "Export Receiving Notes",
@@ -444,7 +444,7 @@ export const menuItems = [
       },
       {
         name: "Delivery Notes",
-        links: "/calls",
+        links: "/delivery_notes",
         subLinks: [
           {
             name: "Convert Delivery Notes To Incoices",
@@ -473,6 +473,89 @@ export const menuItems = [
     color: "#8150E4",
     desc: `Prepare and ship customer orders on time, easily re-order products and keep tight control over your inventory levels.`,
     active: true,
+    moreLinks:[
+      {
+        name: "Picking Lists",
+        link:"",
+      },
+      {
+        name: "Purchase Return",
+        link:"",
+      },
+      {
+        name: "Inventory Count Sheet",
+        link:"",
+      },
+      {
+        name: "Inventory Entries",
+        link:"",
+      },
+      {
+        name: "Inventoty Withdrawals",
+        link:"",
+      },
+    ],
+    menuLinks :[
+      {
+        name: "Storage Locations",
+        link: "./",
+      },
+      {
+        name: "Products",
+        link: "costumer",
+      },
+      {
+        name: "Sales Price List",
+        link: "quotes",
+      },
+      {
+        name: "Product Price List",
+        link: "invoices",
+      },
+    ],
+    subLinks: [
+      {
+        name: "Dashboard",
+        links: "/accounting",
+        subLinks: [
+          {
+            name: "Inventory Withdrawals",
+            link: "",
+          },
+          {
+            name: "Inventory Transfers",
+            link: "",
+          },
+          {
+            name: "Inventory Count Sheet",
+            link: "",
+          },
+          {
+            name: "Export Inventory On Hand",
+            link: "",
+          },
+        ],
+      },
+      {
+        name: "Bank Activity",
+        links: "/bank_account", 
+        subLinks: [
+          {
+            name: "New Purchase Order",
+            link: "",
+          },
+          {
+            name: "Export Purchase Order",
+            link: "",
+          },
+          {
+            name: "Export Purchase Order Lines",
+            link: "",
+          },
+        ],
+      },
+
+    ],
   },
   {
     id: 7,
