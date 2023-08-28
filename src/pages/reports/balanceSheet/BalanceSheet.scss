@@ -3,7 +3,39 @@
 .BalanceSheet {
     min-height: 100vh;
     background-color: $bg1;
+    &__header {
+        height: 60px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        position: sticky;
+        top: 0;
 
+        button {
+            height: 80%;
+            font-size: 20px;
+            position: absolute;
+
+            &:hover {
+                background-color: $bg3;
+            }
+        }
+
+        h5 {
+            width: 100%;
+            text-align: center;
+        }
+        @media(max-width:480px){
+            button{
+                font-size: 16px;
+                left: 0;
+            }
+            h5{
+                font-size: 18px;
+                text-align: end;
+            }
+        }
+    }
 
     &__content {
         width: 75%;
@@ -66,6 +98,10 @@
                     border-bottom: 2px solid lightgrey;
                     display: flex;
                     gap: 25px;
+                    flex-wrap: wrap;
+                    @media(max-width: 720px){
+                        gap: 15px;
+                    }
 
                     .mode {
                         button {

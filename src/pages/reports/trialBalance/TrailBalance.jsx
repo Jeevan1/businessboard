@@ -23,7 +23,7 @@ function TrailBalance() {
         <h5>General Ledger</h5>
       </div>
       <div className="TrailBalance__content my-3 rounded">
-        <div className="ProfitAndLoss__content__header">
+        <div className="TrailBalance__content__header">
           <h6 className="py-3">From 01/01/2023 to 31/12/2023</h6>
           <div className="d-flex pb-3 justify-content-center">
             <div className="total__income">

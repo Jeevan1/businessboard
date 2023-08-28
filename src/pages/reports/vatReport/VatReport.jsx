@@ -2,18 +2,21 @@ import React, { useState } from "react";
 import "./VatReport.scss";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import { RxCross2, RxPlus } from "react-icons/rx";
+import { useNavigate } from "react-router-dom";
 
 function VatReport() {
   const [showFilter, setShowFIlter] = useState(false);
   const [add, setAdd] = useState(false);
   const [customPeriod, setCustomPeriod] = useState(false);
   const [content, setContent] = useState(false);
+  const navigate = useNavigate();
   return (
     <div className="VatReport">
       <div className="VatReport__header px-4 shadow-sm">
         <button
           type="button"
           className="px-3 rounded d-flex align-items-center"
+          onClick={()=> navigate(-1)}
         >
           <MdOutlineKeyboardArrowLeft className="icon" />
           <span>Back</span>
