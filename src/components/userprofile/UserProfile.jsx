@@ -136,7 +136,7 @@ function UserProfile({ label }) {
                   <div>
                     <p>Notifications</p>
                     <div>
-                    <div>
+                    <div>s
                       <OnOff
                         name={"Notifications"}
                         value1={"on"}

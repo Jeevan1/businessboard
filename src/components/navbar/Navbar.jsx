@@ -25,7 +25,7 @@ function Navbar({menuname,setMenuName}) {
       <div className="container-fluid d-flex justify-content-between ps-4 pe-0">
         <div className="Navbar__1 d-flex align-items-center gap-4">
           <GrMenu className="icon fs-4" onClick={() => {setMenuName(!menuname), setMobileMenu(!mobileMenu)}}/>
-          <Logo height={"25px"} />
+          <Logo height={"35px"} />
           {loc.pathname!='/home' && <SearchBar width={"400px"} style={"bg-light shadow-sm border rounded-1"} placeholder={'What do you want to do?'}/>}
         </div>
         <div className="Navbar__2 d-flex align-items-center  fs-4">
